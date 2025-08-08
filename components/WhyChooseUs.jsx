@@ -1,4 +1,9 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import { FaCogs, FaBuilding, FaRegHandshake, FaSolarPanel } from "react-icons/fa";
 
 const reasons = [
@@ -29,9 +34,13 @@ const reasons = [
 ];
 
 export default function WhyChooseUs() {
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: true });
+    }, []);
+
     return (
-        <section className="bg-[#FDFBF6] py-16 px-6">
-            <div className="max-w-7xl mx-auto text-center mb-12">
+        <section className="bg-gradient-to-b from-[#E5C97B] to-[#3B0A4F] py-16 px-6">
+            <div className="max-w-7xl mx-auto text-center mb-12" data-aos="fade-up">
                 <h2 className="text-4xl font-bold text-[#3B0A4F] uppercase tracking-wide">
                     Why Choose Us?
                 </h2>
@@ -44,6 +53,8 @@ export default function WhyChooseUs() {
                 {reasons.map((item, idx) => (
                     <div
                         key={idx}
+                        data-aos="zoom-in-up"
+                        data-aos-delay={idx * 150}
                         className="bg-white border border-gray-200 hover:border-[#C5A352] p-6 rounded-xl shadow-md transition-all duration-300 transform hover:scale-[1.03] hover:shadow-lg group"
                     >
                         <div className="flex items-center gap-4 mb-4">

@@ -3,12 +3,11 @@
 import React, { useEffect, useState, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { FaProjectDiagram, FaSmile, FaClock } from "react-icons/fa";
 
 const statsData = [
-    { number: 2000, suffix: "kW", label: "Project Completed", icon: <FaProjectDiagram /> },
-    { number: 700, suffix: "", label: "Happy Customers", icon: <FaSmile /> },
-    { number: 8, suffix: "Years", label: "Years of Experience", icon: <FaClock /> },
+    { number: 2000, suffix: "kW", label: "Project Completed"},
+    { number: 700, suffix: "", label: "Happy Customers"},
+    { number: 8, suffix: "Years", label: "Years of Experience"},
 ];
 
 // Hook to detect if an element is visible on screen
@@ -81,9 +80,6 @@ export default function AboutWebsiteStats() {
                             data-aos="fade-up"
                             data-aos-delay={index * 150}
                         >
-                            <div className="text-yellow-300 text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                                {stat.icon}
-                            </div>
                             <div className="text-4xl font-bold">
                                 {count}
                                 {stat.suffix && (

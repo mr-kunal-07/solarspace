@@ -6,27 +6,71 @@ import Footer from "../../components/Nav-Fot/Footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap", // ✅ improves performance
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap", // ✅ improves performance
 });
 
+// ✅ SEO Metadata
 export const metadata = {
-  title: "Solar Space",
-  description: "This ia a solar energy website",
+  title: {
+    default: "Solar Space",
+    template: "%s | Solar Space", // Dynamic titles
+  },
+  description: "Affordable and sustainable solar energy solutions in India by Solar Space.",
+  keywords: [
+    "solar panels India",
+    "solar installation Mumbai",
+    "clean energy solutions",
+    "Solar Space",
+    "renewable energy company",
+  ],
+  metadataBase: new URL("https://your-domain.com"), // ⚠️ update this
+  authors: [{ name: "Solar Space Team", url: "https://your-domain.com" }],
+  openGraph: {
+    title: "Solar Space – Green Energy for India",
+    description: "Empowering India's transition to clean, renewable energy.",
+    url: "https://your-domain.com",
+    siteName: "Solar Space",
+    images: [
+      {
+        url: "/og-image.jpg", // ✅ add an image in public folder (1200x630)
+        width: 1200,
+        height: 630,
+        alt: "Solar Space - Green Energy",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Solar Space",
+    description: "Sustainable solar energy solutions for homes and businesses.",
+    images: ["/og-image.jpg"],
+    creator: "@solarspace", // ⚠️ Optional: your Twitter handle
+  },
+  icons: {
+    icon: "/Logo.png",
+    shortcut: "/Logo.png",
+    apple: "/Logo.png",
+  },
+  themeColor: "#3B0A4F", // Matches your branding
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-900`}
       >
-        <Navbar/>
-        {children}
-        <Footer/>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

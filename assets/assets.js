@@ -5,7 +5,7 @@ import AboutTable from './AboutTable.jpg';
 import MissionImage from './mission.png';
 import VisionImage from './VisionImage.png';
 import logo1 from './Sola.jpg';
-
+import LogoPc from './LogoPc.png';
 
 
 export const assets = {
@@ -15,8 +15,8 @@ export const assets = {
     About,
     AboutTable,
     MissionImage,
-    VisionImage
-
+    VisionImage,
+    LogoPc,
 }
 
 

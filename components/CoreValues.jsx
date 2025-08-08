@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import {
     FaBolt,
     FaAward,
@@ -6,6 +7,8 @@ import {
     FaStar,
     FaHandshake,
 } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const values = [
     {
@@ -41,9 +44,13 @@ const values = [
 ];
 
 export default function CoreValues() {
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: true });
+    }, []);
+
     return (
         <section className="bg-gradient-to-b from-[#e9bc41] to-[#E5C97B] select-none py-16 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto  text-center mb-12">
+            <div className="max-w-7xl mx-auto text-center mb-12" data-aos="fade-down">
                 <h2 className="text-3xl sm:text-4xl font-semibold text-[#3B0A4F] uppercase tracking-wide">
                     Our Core Values
                 </h2>
@@ -54,6 +61,8 @@ export default function CoreValues() {
                     <div
                         key={idx}
                         className="bg-gray-100 hover:bg-[#3B0A4F] transition-all duration-300 p-6 rounded-2xl shadow-md flex flex-col items-center text-center group"
+                        data-aos="zoom-in"
+                        data-aos-delay={idx * 100}
                     >
                         <div className="mb-4 text-[#C5A352] group-hover:text-yellow-300 transition-colors duration-300">
                             {val.icon}
@@ -67,7 +76,6 @@ export default function CoreValues() {
                             {val.description}
                         </p>
                     </div>
-
                 ))}
             </div>
         </section>
