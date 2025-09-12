@@ -1,7 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "../../components/Nav-Fot/Navbar";
-import Footer from "../../components/Nav-Fot/Footer";
+import Navbar from "@/components/Nav-Fot/Navbar";
+import Footer from "@/components/Nav-Fot/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -68,8 +69,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-900`}
       >
+        <a href="#content" className="sr-only focus:not-sr-only fixed top-2 left-2 z-[60] bg-[#E5C97B] text-[#3B0A4F] px-3 py-2 rounded shadow">Skip to content</a>
         <Navbar />
-        <main>{children}</main>
+        <main id="content">{children}</main>
+        <WhatsAppButton />
         <Footer />
       </body>
     </html>

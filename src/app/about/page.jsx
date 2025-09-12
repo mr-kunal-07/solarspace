@@ -3,12 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import CoreValues from "../../../components/CoreValues";
-import WhyChooseUs from "../../../components/WhyChooseUs";
-import VisionMission from "../../../components/VisionMission";
-import AboutWebsiteStats from "../../../components/AboutWebsiteStats";
-import Partners from "../../../components/Patners/Partners";
-import { assets } from "../../../assets/assets";
+import CoreValues from "../../components/CoreValues";
+import WhyChooseUs from "../../components/WhyChooseUs";
+import VisionMission from "../../components/VisionMission";
+import AboutWebsiteStats from "../../components/AboutWebsiteStats";
+import Partners from "../../components/Patners/Partners";
+import { assets } from "../../assets/assets";
 import { motion } from "framer-motion";
 
 // Animation variants

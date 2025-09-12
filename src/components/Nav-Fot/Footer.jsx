@@ -7,19 +7,12 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaClock,
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-  FaArrowUp,
 } from "react-icons/fa";
 
 export default function Footer() {
-  const scrollToTop = () =>
-    typeof window !== "undefined" &&
-    window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
-    <footer className="bg-[#0F0F0F] text-white px-6 md:px-12 py-14">
+    <footer className="bg-[#0F0F0F] text-white px-6 md:px-12 py-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
         {/* Brand / About */}
         <div>
@@ -97,22 +90,6 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} Solar Space. All rights reserved.
         </p>
         <div className="flex items-center space-x-5">
-          <SocialIcon href="https://facebook.com" label="Facebook">
-            <FaFacebookF />
-          </SocialIcon>
-          <SocialIcon href="https://twitter.com" label="Twitter">
-            <FaTwitter />
-          </SocialIcon>
-          <SocialIcon href="https://instagram.com" label="Instagram">
-            <FaInstagram />
-          </SocialIcon>
-          <button
-            onClick={scrollToTop}
-            aria-label="Scroll to top"
-            className="text-[#E5C97B] hover:text-white text-lg transition-all"
-          >
-            <FaArrowUp />
-          </button>
         </div>
       </div>
     </footer>

@@ -5,37 +5,84 @@ import Image from 'next/image';
 const projects = [
     {
         id: 1,
-        title: 'Residential Rooftop – Mumbai',
-        location: 'Mumbai, Maharashtra',
-        capacity: '5 kW',
+        title: 'Residential Rooftop – Uran',
+        location: 'Uran, Mumbai, Maharashtra',
+        capacity: '10 kW',
         description:
-            'A residential solar rooftop installation helping the client save up to 90% on monthly electricity bills.',
+            'A residential solar rooftop installation designed to maximize savings and provide clean, renewable energy for households.',
         image: '/Projects/1.jpg',
     },
     {
         id: 2,
-        title: 'Commercial Installation – Nashik',
-        location: 'Nashik, Maharashtra',
-        capacity: '20 kW',
+        title: 'Commercial Installation – Sanpada',
+        location: 'Sanpada, Navi Mumbai, Maharashtra',
+        capacity: '40 kW',
         description:
-            'Solar power system for a commercial building to offset high energy costs and support sustainability.',
+            'Solar power system for a commercial building, significantly reducing high electricity costs and contributing to sustainable operations.',
         image: '/Projects/2.jpg',
     },
     {
         id: 3,
-        title: 'School Project – Pune',
+        title: 'Shapoorji Pallonji – Epsilon Tower',
         location: 'Pune, Maharashtra',
-        capacity: '15 kW',
+        capacity: '40 kW',
         description:
-            'Installed on a school rooftop, this system powers classrooms and labs during school hours.',
+            'Installed at Epsilon Tower, this rooftop system supplies reliable solar power to support the building’s daily energy needs.',
         image: '/Projects/3.jpg',
     },
+    {
+        id: 4,
+        title: 'Industrial Rooftop – Borivali',
+        location: 'Borivali, Mumbai, Maharashtra',
+        capacity: '20 kW',
+        description:
+            'A solar installation at Vasant Marwell Borivali ensuring clean energy generation and reduced carbon footprint for the premises.',
+        image: '/Projects/4.jpg',
+    },
+    {
+        id: 5,
+        title: 'Ground-Mounted Solar – Malvan',
+        location: 'Malvan, Maharashtra',
+        capacity: '10 kW',
+        description:
+            'A ground-mounted solar project designed for rural energy needs, ensuring sustainability and independence from grid fluctuations.',
+        image: '/Projects/5.jpg',
+    },
+    {
+        id: 6,
+        title: 'Shapoorji Pallonji – Astron Tower',
+        location: 'Pune, Maharashtra',
+        capacity: '40 kW',
+        description:
+            'Installed at Astron Tower, this system powers residential common areas and helps in reducing electricity expenses sustainably.',
+        image: '/Projects/6.jpg',
+    },
+    {
+        id: 7,
+        title: 'Inverter Installation – Chauke',
+        location: 'Chauke, Maharashtra',
+        capacity: '10 kW',
+        description:
+            'High-efficiency inverter system installed in Chauke to ensure smooth energy conversion and reliable solar output.',
+        image: '/Projects/7.jpg',
+    },
+    {
+        id: 8,
+        title: 'Inverter Installation – Bhandup',
+        location: 'Bhandup, Mumbai, Maharashtra',
+        capacity: '20 kW',
+        description:
+            'Advanced solar inverter setup at Bhandup, providing stable power conversion for larger-scale energy needs.',
+        image: '/Projects/8.jpg',
+    }
+
+
 ];
 
 const Projects = () => {
     return (
         <section className="min-h-screen w-full bg-gradient-to-b from-[#3B0A4F] to-white py-16 px-4 sm:px-6 lg:px-8">
-            <h1 className="text-6xl font-bold text-center mb-12 text-[#C5A352] drop-shadow-md">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-6 sm:mb-12 text-[#C5A352] drop-shadow-md">
                 Our Solar Projects
             </h1>
 
@@ -46,7 +93,7 @@ const Projects = () => {
                         className="group bg-white/30 rounded-2xl border border-white/40 backdrop-blur-md shadow-2xl transition-all duration-300 hover:scale-[1.03]"
                         aria-labelledby={`project-${project.id}-title`}
                     >
-                        <div className="relative w-full h-48 sm:h-56 rounded-t-2xl overflow-hidden">
+                        <div className="relative w-full h-44 sm:h-56 rounded-t-2xl overflow-hidden">
                             <Image
                                 src={project.image}
                                 alt={`${project.title} - ${project.location}`}

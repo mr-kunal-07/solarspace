@@ -49,7 +49,7 @@ export default function CoreValues() {
     }, []);
 
     return (
-        <section className="bg-gradient-to-b from-[#e9bc41] to-[#E5C97B] select-none py-16 px-4 sm:px-6 lg:px-8">
+        <section className="bg-gradient-to-b from-[#fff] to-[#E5C97B] select-none py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto text-center mb-12" data-aos="fade-down">
                 <h2 className="text-3xl sm:text-4xl font-semibold text-[#3B0A4F] uppercase tracking-wide">
                     Our Core Values

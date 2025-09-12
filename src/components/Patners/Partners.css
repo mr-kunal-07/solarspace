@@ -1,5 +1,5 @@
 .partners-section {
-  background: linear-gradient(to bottom, #540e6b, #0F0F0F);
+  background: linear-gradient(to bottom, #540e6b, #0f0f0f);
   padding: 3rem 1rem;
   overflow: hidden;
   text-align: center;
@@ -23,6 +23,7 @@
   display: flex;
   width: max-content;
   animation: scroll-left 40s linear infinite;
+  will-change: transform;
 }
 
 .marquee-item {

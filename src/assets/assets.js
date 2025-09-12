@@ -33,7 +33,7 @@ import ADANI from './Patners/ADANI.png'
 import LT from './Patners/L&T.jpg'
 import NOVASYS from './Patners/NOVASYS.webp'
 import SIEMENS from './Patners/SIEMENS.png'
-import HPL from './Patners/HPL.webp'
+import HPL from './Patners/HCL.png'
 
 
 export const patners = {
@@ -51,3 +51,4 @@ export const patners = {
     SIEMENS,
     HPL
 }
+
