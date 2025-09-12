@@ -133,13 +133,15 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile Bottom Bar */}
-      <div className="md:hidden fixed bottom-0 left-0 w-full bg-gradient-to-r from-[#3B0A4F] via-[#4C1360] to-[#3B0A4F] backdrop-blur-lg shadow-2xl flex justify-around items-center h-16 z-50 rounded-t-2xl border-t border-[#E5C97B]/30">
+      <div className="md:hidden fixed bottom-0 inset-x-0 w-full bg-gradient-to-r from-[#3B0A4F] via-[#4C1360] to-[#3B0A4F] backdrop-blur-lg shadow-2xl flex justify-around items-center h-16 z-50 rounded-t-2xl border-t border-[#E5C97B]/30">
         <BottomLink href="/" pathname={pathname} icon={<FaHome />} label="Home" />
         <BottomLink href="/about" pathname={pathname} icon={<FaInfoCircle />} label="About" />
         <BottomLink href="/services" pathname={pathname} icon={<FaSolarPanel />} label="Services" />
         <BottomLink href="/projects" pathname={pathname} icon={<FaProjectDiagram />} label="Projects" />
         <BottomLink href="/contact" pathname={pathname} icon={<FaPhone />} label="Contact" />
       </div>
+
+
     </>
   );
 }

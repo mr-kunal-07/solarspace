@@ -6,7 +6,7 @@ import { assets } from "../../assets/assets";
 
 export default function Hero() {
     return (
-        <section className="relative w-full h-[85vh] sm:h-screen overflow-hidden flex items-center justify-center">
+        <section className="relative max-w-screen h-[85vh] sm:h-screen overflow-hidden flex items-center justify-center">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
