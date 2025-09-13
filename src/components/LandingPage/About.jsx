@@ -1,26 +1,16 @@
 "use client";
 
-import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { assets } from "../../assets/assets";
 
 export default function About() {
-    useEffect(() => {
-        AOS.init({ duration: 1000, once: true });
-    }, []);
-
     return (
-        <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
+        <section className="bg-white max-w-screen py-20 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
 
                 {/* Text Content */}
-                <div
-                    className="w-full md:w-1/2 space-y-6 text-center md:text-left"
-                    data-aos="fade-right"
-                >
+                <div className="w-full md:w-1/2 space-y-6 text-center md:text-left">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#3B0A4F] leading-snug">
                         Powering India’s <span className="text-[#C5A352]">Green Energy</span> Future
                     </h2>
@@ -39,10 +29,7 @@ export default function About() {
                 </div>
 
                 {/* Image */}
-                <div
-                    className="w-full md:w-1/2 flex justify-center"
-                    data-aos="fade-left"
-                >
+                <div className="w-full md:w-1/2 flex justify-center">
                     <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md h-64 sm:h-80 md:h-96 rounded-2xl overflow-hidden shadow-xl">
                         <Image
                             src={assets.About}
