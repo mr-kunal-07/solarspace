@@ -81,7 +81,7 @@ const projects = [
 
 const Projects = () => {
     return (
-        <section className="min-h-screen w-full bg-gradient-to-b from-[#3B0A4F] to-white py-16 px-4 sm:px-6 lg:px-8">
+        <section className="min-h-screen w-full bg-gradient-to-b from-[#FDF9F3] via-[#FBF7EF] to-[#F9F5EC] py-16 px-4 sm:px-6 lg:px-8">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-6 sm:mb-12 text-[#C5A352] drop-shadow-md">
                 Our Solar Projects
             </h1>
