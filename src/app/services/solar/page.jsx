@@ -13,11 +13,6 @@ const solarServices = [
         link: "/services/solar/off-grid",
     },
     {
-        title: "Hybrid Solar System",
-        description: "Best of both worlds — works with grid + batteries.",
-        link: "/services/solar/hybrid",
-    },
-    {
         title: "Solar Water Pump",
         description: "Efficient solar-powered water pumping solutions.",
         link: "/services/solar/water-pump",
