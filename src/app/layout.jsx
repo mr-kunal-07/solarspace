@@ -30,12 +30,12 @@ export const metadata = {
     "Solar Space",
     "renewable energy company",
   ],
-  metadataBase: new URL("https://your-domain.com"), // ⚠️ update this
-  authors: [{ name: "Solar Space Team", url: "https://your-domain.com" }],
+  metadataBase: new URL("https://solarspaces.in"),
+  authors: [{ name: "Solar Space Team", url: "https://solarspaces.in" }],
   openGraph: {
     title: "Solar Space – Green Energy for India",
     description: "Empowering India's transition to clean, renewable energy.",
-    url: "https://your-domain.com",
+    url: "https://solarspaces.in",
     siteName: "Solar Space",
     images: [
       {
@@ -56,9 +56,7 @@ export const metadata = {
     creator: "@solarspace", // ⚠️ Optional: your Twitter handle
   },
   icons: {
-    icon: "/Logo.png",
-    shortcut: "/Logo.png",
-    apple: "/Logo.png",
+    icon: "/favicon.ico",
   },
   themeColor: "#3B0A4F", // Matches your branding
 };
