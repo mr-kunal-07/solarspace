@@ -4,8 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { Sun, Zap, Battery, Shield, Home, Building2, Radio } from "lucide-react";
+import { ArrowRight, ArrowLeft } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function OffGridSolar() {
+    const router = useRouter();
     const reduceMotion = useReducedMotion();
 
     // Motion variants (respect reduced motion)
@@ -78,11 +81,19 @@ export default function OffGridSolar() {
 
     return (
         <section
-            className="bg-gradient-to-b  from-[#FDF9F3] to-[#F9F5EC] py-12 sm:py-16 lg:py-20"
-            // let mobile safe-area inset be honored
+            className="bg-gradient-to-b from-[#FDF9F3] to-[#F9F5EC] py-12 sm:py-16 lg:py-20"
             style={{ paddingBottom: "env(safe-area-inset-bottom, 1rem)" }}
         >
             <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
+                {/* Back Button */}
+                <button
+                    onClick={() => router.back()}
+                    className="mb-8 flex items-center gap-2 text-[#3B0A4F] hover:text-[#C5A352] transition font-medium"
+                >
+                    <ArrowLeft className="w-5 h-5" />
+                    Back
+                </button>
+
                 {/* HERO: image + intro */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                     <motion.div

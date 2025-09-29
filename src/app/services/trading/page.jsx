@@ -4,10 +4,13 @@ import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { Sun, Cable, Zap, ShieldCheck, Package, Award } from "lucide-react";
 import { useEffect, useState } from "react";
+import { ArrowRight, ArrowLeft } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function SolarElectricalTrading() {
     const reduceMotion = useReducedMotion();
     const [isClient, setIsClient] = useState(false);
+    const router = useRouter();
 
     useEffect(() => setIsClient(true), []);
 
@@ -60,6 +63,13 @@ export default function SolarElectricalTrading() {
     return (
         <section className="bg-gradient-to-b from-[#FDF9F3] via-[#FBF7EF] to-[#F9F5EC] py-14 sm:py-16 lg:py-20">
             <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
+                <button
+                    onClick={() => router.back()}
+                    className="mb-8 flex items-center gap-2 text-[#3B0A4F] hover:text-[#C5A352] transition font-medium"
+                >
+                    <ArrowLeft className="w-5 h-5" />
+                    Back
+                </button>
                 {/* HEADER */}
                 <motion.div
                     {...motionProps(fadeUp)}

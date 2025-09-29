@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Sun, Ruler, Cog, Wrench, FileCheck, Cable } from "lucide-react"; // fixed icons
+import { Sun, Ruler, Cog, Wrench, FileCheck, Cable } from "lucide-react";
 
 const services = [
     { title: "Solar Services", link: "/services/solar", icon: Sun, desc: "On-grid, off-grid, water pumps, and more sustainable solutions." },

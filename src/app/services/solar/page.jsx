@@ -1,5 +1,8 @@
+"use client";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowLeft } from "lucide-react";
+import { useRouter } from "next/navigation";
+
 
 const solarServices = [
     {
@@ -25,9 +28,20 @@ const solarServices = [
 ];
 
 export default function SolarServices() {
+    const router = useRouter();
+
     return (
         <section className="py-16 bg-gradient-to-b from-[#FDF9F3] to-[#F9F5EC]">
             <div className="container mx-auto px-6">
+                {/* Back Button */}
+                <button
+                    onClick={() => router.back()}
+                    className="mb-8 flex items-center gap-2 text-[#3B0A4F] hover:text-[#C5A352] transition font-medium"
+                >
+                    <ArrowLeft className="w-5 h-5" />
+                    Back
+                </button>
+
                 <h1 className="text-4xl font-extrabold text-center text-[#3B0A4F] mb-12">
                     Solar Services
                 </h1>
@@ -42,7 +56,9 @@ export default function SolarServices() {
                             <h3 className="text-lg font-bold text-[#3B0A4F] uppercase mb-3">
                                 {service.title}
                             </h3>
-                            <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
+                            <p className="text-gray-600 text-sm leading-relaxed">
+                                {service.description}
+                            </p>
                             <div className="mt-6 flex justify-end">
                                 <ArrowRight className="w-6 h-6 text-[#C5A352] group-hover:translate-x-1 transition-transform" />
                             </div>

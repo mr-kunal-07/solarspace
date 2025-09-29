@@ -9,10 +9,13 @@ import {
     Zap,
 } from "lucide-react";
 import { useEffect, useState } from "react";
+import { ArrowRight, ArrowLeft } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function Installation() {
     const reduceMotion = useReducedMotion();
     const [isClient, setIsClient] = useState(false);
+    const router = useRouter();
 
     useEffect(() => setIsClient(true), []);
 
@@ -59,6 +62,13 @@ export default function Installation() {
     return (
         <section className="bg-gradient-to-b from-[#FAF9F6] to-[#F4F1EB] py-14 sm:py-16 lg:py-20">
             <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
+                <button
+                    onClick={() => router.back()}
+                    className="mb-8 flex items-center gap-2 text-[#3B0A4F] hover:text-[#C5A352] transition font-medium"
+                >
+                    <ArrowLeft className="w-5 h-5" />
+                    Back
+                </button>
                 {/* HERO */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     {/* Left: Text */}

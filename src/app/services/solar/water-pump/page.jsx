@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { Sun, Zap, Droplet, Settings, Battery, Home, Leaf } from "lucide-react";
+import { ArrowRight, ArrowLeft } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 /**
  * SolarWaterPump - improved, responsive, accessible component
@@ -19,6 +21,7 @@ import { Sun, Zap, Droplet, Settings, Battery, Home, Leaf } from "lucide-react";
 
 export default function SolarWaterPump() {
     const reduceMotion = useReducedMotion();
+    const router = useRouter();
 
     const appearLeft = { hidden: { opacity: 0, x: -28 }, visible: { opacity: 1, x: 0 } };
     const appearRight = { hidden: { opacity: 0, x: 28 }, visible: { opacity: 1, x: 0 } };
@@ -101,6 +104,13 @@ export default function SolarWaterPump() {
             style={{ paddingBottom: "env(safe-area-inset-bottom, 1rem)" }}
         >
             <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-16">
+                <button
+                    onClick={() => router.back()}
+                    className="mb-8 flex items-center gap-2 text-[#3B0A4F] hover:text-[#C5A352] transition font-medium"
+                >
+                    <ArrowLeft className="w-5 h-5" />
+                    Back
+                </button>
                 {/* HERO */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
                     {/* Image */}

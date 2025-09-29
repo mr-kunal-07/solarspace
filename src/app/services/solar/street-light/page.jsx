@@ -4,10 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { Sun, Battery, Lightbulb, Zap, Landmark, Eye } from "lucide-react";
+import { ArrowRight, ArrowLeft } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function SolarStreetLight() {
     const reduceMotion = useReducedMotion();
-
+    const router = useRouter();
     /* ---------------- motion variants ---------------- */
     const slideLeft = { hidden: { opacity: 0, x: -28 }, visible: { opacity: 1, x: 0 } };
     const slideRight = { hidden: { opacity: 0, x: 28 }, visible: { opacity: 1, x: 0 } };
@@ -36,6 +38,14 @@ export default function SolarStreetLight() {
             style={{ paddingBottom: "env(safe-area-inset-bottom, 1rem)" }}
         >
             <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-16">
+                {/* Back Button */}
+                <button
+                    onClick={() => router.back()}
+                    className="mb-8 flex items-center gap-2 text-[#3B0A4F] hover:text-[#C5A352] transition font-medium"
+                >
+                    <ArrowLeft className="w-5 h-5" />
+                    Back
+                </button>
                 {/* HERO */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
                     {/* Image - mobile first, good aspect ratio */}
