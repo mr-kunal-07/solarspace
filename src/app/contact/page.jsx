@@ -168,7 +168,7 @@ export default function Contact() {
                                         onChange={handleChange}
                                         placeholder="Enter your name"
                                         required
-                                        className="w-full px-4 py-3 rounded-xl border border-[#C5A352]/30 bg-white/80 focus:border-[#C5A352] focus:ring-2 focus:ring-[#C5A352]/20 outline-none transition-all duration-300"
+                                        className="w-full px-4 py-3 rounded-xl border border-[#C5A352]/30 placeholder:text-gray-500 focus:border-[#C5A352] focus:ring-2 focus:ring-[#C5A352]/20 outline-none transition-all duration-300 text-black"
                                     />
                                 </div>
 
@@ -183,7 +183,7 @@ export default function Contact() {
                                         onChange={handleChange}
                                         placeholder="your.email@example.com"
                                         required
-                                        className="w-full px-4 py-3 rounded-xl border border-[#C5A352]/30 bg-white/80 focus:border-[#C5A352] focus:ring-2 focus:ring-[#C5A352]/20 outline-none transition-all duration-300"
+                                        className="w-full px-4 py-3 rounded-xl border border-[#C5A352]/30 text-black placeholder:text-gray-500 focus:border-[#C5A352] focus:ring-2 focus:ring-[#C5A352]/20 outline-none transition-all duration-300"
                                     />
                                 </div>
 
@@ -198,7 +198,7 @@ export default function Contact() {
                                         onChange={handleChange}
                                         placeholder="+91 XXXXX XXXXX"
                                         required
-                                        className="w-full px-4 py-3 rounded-xl border border-[#C5A352]/30 bg-white/80 focus:border-[#C5A352] focus:ring-2 focus:ring-[#C5A352]/20 outline-none transition-all duration-300"
+                                        className="w-full px-4 py-3 rounded-xl border border-[#C5A352]/30 text-black placeholder:text-gray-500 focus:border-[#C5A352] focus:ring-2 focus:ring-[#C5A352]/20 outline-none transition-all duration-300"
                                     />
                                 </div>
 
@@ -211,7 +211,7 @@ export default function Contact() {
                                         value={formData.budget}
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-4 py-3 rounded-xl border border-[#C5A352]/30 bg-white/80 focus:border-[#C5A352] focus:ring-2 focus:ring-[#C5A352]/20 outline-none transition-all duration-300"
+                                        className="w-full px-4 py-3 rounded-xl border border-[#C5A352]/30 text-black placeholder:text-gray-500 focus:border-[#C5A352] focus:ring-2 focus:ring-[#C5A352]/20 outline-none transition-all duration-300"
                                     >
                                         <option value="">Select your budget</option>
                                         <option value="Below ₹1 Lakh">Below ₹1 Lakh</option>
@@ -231,7 +231,7 @@ export default function Contact() {
                                         value={formData.requirement}
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-4 py-3 rounded-xl border border-[#C5A352]/30 bg-white/80 focus:border-[#C5A352] focus:ring-2 focus:ring-[#C5A352]/20 outline-none transition-all duration-300"
+                                        className="w-full px-4 py-3 rounded-xl border border-[#C5A352]/30 text-black placeholder:text-gray-500 focus:border-[#C5A352] focus:ring-2 focus:ring-[#C5A352]/20 outline-none transition-all duration-300"
                                     >
                                         <option value="">Select requirement</option>
                                         <option value="Residential Solar">Residential Solar</option>
@@ -255,14 +255,14 @@ export default function Contact() {
                                         rows={4}
                                         placeholder="Tell us about your project or requirements..."
                                         required
-                                        className="w-full px-4 py-3 rounded-xl border border-[#C5A352]/30 bg-white/80 focus:border-[#C5A352] focus:ring-2 focus:ring-[#C5A352]/20 outline-none transition-all duration-300 resize-none"
+                                        className="w-full px-4 py-3 rounded-xl border border-[#C5A352]/30 text-black placeholder:text-gray-500 focus:border-[#C5A352] focus:ring-2 focus:ring-[#C5A352]/20 outline-none transition-all duration-300 resize-none"
                                     />
                                 </div>
 
                                 {status.message && (
                                     <div className={`p-4 rounded-xl flex items-start gap-3 ${status.type === "success"
-                                            ? "bg-green-50 border border-green-200"
-                                            : "bg-red-50 border border-red-200"
+                                        ? "bg-green-50 border border-green-200"
+                                        : "bg-red-50 border border-red-200"
                                         }`}>
                                         {status.type === "success" ? (
                                             <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
